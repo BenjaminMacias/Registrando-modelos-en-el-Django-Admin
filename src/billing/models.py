@@ -4,7 +4,10 @@ from django.db.models.signals import pre_save, post_save
 from django.urls import reverse
 from accounts.models import GuestEmail
 
+from django.contrib.auth import get_user_model  
+
 User = settings.AUTH_USER_MODEL
+
 
 class BillingProfile(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.DO_NOTHING)

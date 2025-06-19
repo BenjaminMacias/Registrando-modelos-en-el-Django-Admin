@@ -13,17 +13,12 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 import socket
 import sys
-<<<<<<< HEAD
-from pathlib import Path
 
-from distutils.util import strtobool
-=======
 #from distutils.util import strtobool si se necesita la activamos
 from pathlib import Path
 
 def strtobool(val: str) -> bool:
     return val.lower() in ("yes", "true", "t", "1")
->>>>>>> 28ea830 (Proyecto e-commerce completo con modelos, order, admin y migraciones)
 
 # Build paths inside the project like this: BASE_DIR / "subdir".
 BASE_DIR = Path(__file__).resolve().parent.parent

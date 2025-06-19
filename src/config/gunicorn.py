@@ -3,7 +3,12 @@
 import multiprocessing
 import os
 
-from distutils.util import strtobool
+#from distutils.util import strtobool si se necesita la activamos
+
+
+def strtobool(val: str) -> bool:
+    return val.lower() in ("yes", "true", "t", "1")
+
 
 bind = f"0.0.0.0:{os.getenv('PORT', '8000')}"
 accesslog = "-"
